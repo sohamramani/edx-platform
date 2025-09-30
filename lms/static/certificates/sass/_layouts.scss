@@ -35,15 +35,15 @@
 
   .logo {
     display: block;
-
-    @include size(rem(100), auto);
+    width: rem(100);
+    height: auto;
 
     margin: 0 auto;
   }
 
   .logo-img {
     display: block;
-    width: 100%;
+    width: auto;
   }
 }
 

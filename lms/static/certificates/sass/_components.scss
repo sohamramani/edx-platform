@@ -221,8 +221,7 @@
 
   position: relative;
   top: -(map-get($spacing-vertical, base));
-  border-top: rem(4) solid $cert-base-color;
-
+  
   // type
   .accomplishment-type {
     @include text-align(center);
@@ -313,7 +312,7 @@
     .signatory-name {
       margin-bottom: map-get($spacing-vertical, xx-small);
       margin-top: 0;
-      font-weight: 400;
+      font-weight: 800;
     }
 
     .signatory-credentials {
@@ -456,12 +455,12 @@
     }
 
     .accomplishment-type-label {
-      color: $cert-base-color;
+      color: green;
     }
 
     .accomplishment-signatories-title,
     .accomplishment-orgs-title {
-      color: $cert-decorative-color;
+      color: green;
     }
 
     .wrapper-statement-and-signatories {
@@ -518,30 +517,30 @@
 
   .accomplishment-rendering {
     background: $white url('../images/bg-verified.png') center no-repeat;
-    background-size: 65%;
+    background-size: 55%;
 
     .deco-corner-tl {
-      @include triangle(20px, $cert-distinguished-color, up-right);
+      @include triangle(20px, green, up-right);
     }
 
     .deco-corner-tr {
-      @include triangle(20px, $cert-distinguished-color, up-left);
+      @include triangle(20px, green, up-left);
     }
 
     .deco-corner-bl {
-      @include triangle(20px, $cert-distinguished-color, down-right);
+      @include triangle(20px, green, down-right);
     }
 
     .deco-corner-br {
-      @include triangle(20px, $cert-distinguished-color, down-left);
+      @include triangle(20px, green, down-left);
     }
   }
 
   .accomplishment-rendering {
-    border-color: $cert-distinguished-color;
+    border-color: green;
 
     .accomplishment-type-label {
-      color: $cert-distinguished-color;
+      color: green;
     }
   }
 }
@@ -634,4 +633,55 @@
   background-color: $gray-back;
   height: rem(2);
   width: 100%;
+}
+
+
+// ===========================
+// Certificate Custom Styling
+// ===========================
+@import "variables"; // if you’re using shared colors
+
+.accomplishment-rendering {
+  border: 9px double #158000;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.accomplishment-type-label {
+  color: green;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.accomplishment-course {
+  color: #0106f7;
+  font-size: 1.5rem;
+  font-family: 'Georgia', serif;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.accomplishment-recipient {
+  color: #222;
+  font-size: 2.2rem;
+  font-family: 'Georgia', serif;
+  text-decoration: underline;
+}
+
+.signatory-name {
+  color: green;
+  font-weight: 800;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.role .organization{
+  color: green;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.organization-logo {
+  max-height: 40px;
+  filter: grayscale(20%) drop-shadow(0 2px 2px rgba(0,0,0,0.3));
 }

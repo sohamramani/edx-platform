@@ -48,12 +48,12 @@ course_mode_class = course_mode if course_mode else ''
                                 % for signatory in certificate_data.get('signatories', []):
                                         <div class="signatory">
                                             % if signatory.get('signature_image_path'):
-                                                <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                                <img class="signatory-signature" src="${signatory['signature_image_path']}" alt="${signatory['name']}">
                                             % endif
-                                            <h4 class="signatory-name hd-5">${signatory['name']}</h4>
+                                            <h1 class="signatory-name hd-5">${signatory['name']}</h1>
                                             <p class="signatory-credentials copy copy-micro">
-                                                <span class="role">${signatory['title']}</span>
-                                                <span class="organization">${signatory['organization']}</span>
+                                                <h2 class="role">${signatory['title']}</h2>
+                                                <h2 class="organization">${signatory['organization']}</h2>
                                             </p>
                                         </div>
                                 % endfor
@@ -95,7 +95,7 @@ course_mode_class = course_mode if course_mode else ''
                     <dt class="label sr-only">${_("Awarded to:")}</dt>
                     <dd class="value copy copy-meta">
                         <span class="recipient-img">
-                            <img class="src" src="/static/certificates/images/demo-user-profile.png" alt="Recipient Image">
+                            <img class="src" src="${static.url('certificates/images/demo-user-profile.png')}" alt="Recipient Image">
                         </span>
                         <div class="recipient-details">
                             <h3 class="recipient-name">${accomplishment_copy_name}</h3>
