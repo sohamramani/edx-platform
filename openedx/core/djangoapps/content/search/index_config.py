@@ -26,6 +26,7 @@ INDEX_FILTERABLE_ATTRIBUTES = [
     Fields.last_published,
     Fields.content + "." + Fields.problem_types,
     Fields.publish_status,
+    Fields.custom_course_number,
 ]
 
 # Mark which attributes are used for keyword search, in order of importance:
@@ -50,6 +51,7 @@ INDEX_SEARCHABLE_ATTRIBUTES = [
     Fields.collections + "." + Fields.collections_key,
     Fields.published + "." + Fields.display_name,
     Fields.published + "." + Fields.published_description,
+    Fields.custom_course_number,
 ]
 
 # Mark which attributes can be used for sorting search results:

@@ -46,6 +46,7 @@ class Fields:
     problem_types = "problem_types"
     context_key = "context_key"
     org = "org"
+    custom_course_number = "custom_course_number"
     access_id = "access_id"  # .models.SearchAccess.id
     # breadcrumbs: an array of {"display_name": "..."} entries. First one is the name of the course/library itself.
     # After that is the name of any parent Section/Subsection/Unit/etc.
